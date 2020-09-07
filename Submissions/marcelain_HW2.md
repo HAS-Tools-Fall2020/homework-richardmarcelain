@@ -9,3 +9,6 @@ I made this week's forecast using the python code provided for the week 2 assign
 - "week2_firstpython.py" _ADDED_ to "assignment_2" folder
 - "week2_firstpython_edited.ipynb" _ADDED_ to "assignment_2" folder
 
+# Grade
+3/3 - Nice work! I like all the things you added really great.
+One note, for now I would prefer that you stick in python scripts and not use jupyter notebooks though. Don't worry we will get to those too!
