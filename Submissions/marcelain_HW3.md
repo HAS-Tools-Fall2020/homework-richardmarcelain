@@ -10,7 +10,7 @@ I made this week's forecast using average weekly flows from 2019, assuming littl
 
 # Assignment Questions
 
-1. The 'flow' variable are float objects, because the objects contain decimals to show data up to the tenth value.  The objects for 'year', 'month' and 'day' are integers, because the objects values are whole numbers in four digit, two digit and 1-2 digit values (respectively). 
-2. The daily flow values were greater than this week's prediction 25% of the days recorded (3 out of 12).
-3. The daily flow values were greater than this week's prediction 100% (330/330) of the time before 2000 and 93.6% (264/282) of the time after 2010.
-4. The daily flow values in early September are generally greater than in late September.  I assumed this commparing mean values of early and late September in a subset (2013-2019) of the total dataset.  
+__1.__ The 'flow' variable are float objects, because the objects contain decimals to show data up to the tenth value.  The objects for 'year', 'month' and 'day' are integers, because the objects values are whole numbers in four digit, two digit and 1-2 digit values (respectively). 
+__2.__ The daily flow values were greater than this week's prediction 25% of the days recorded (3 out of 12) of this year (2020).
+__3.__ The daily flow values were greater than this week's prediction 100% (330/330) of the time before year 2000 and 93.6% (264/282) of the time after year 2010.
+__4.__ The daily flow values in early September are generally greater than in late September, implying that streamflow decreases with time during that month. 
