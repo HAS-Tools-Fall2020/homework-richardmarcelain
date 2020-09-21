@@ -70,12 +70,12 @@ for i in range(len(flow)):
 
 # see how many times the criteria was met by checking the length
 # of the index list that was generated
-print(len(ilist))
+#print(len(ilist))
 
 # Alternatively I could have  written the for loop I used 
 # above to  create ilist like this
 ilist2 = [i for i in range(len(flow)) if flow[i] > 600 and month[i]==7]
-print(len(ilist2))
+#print(len(ilist2))
 
 # Grabbing out the data that met the criteria
 # This  subset of data is just the elements identified 
@@ -147,77 +147,26 @@ print("Days above 56: ", len(sep_a_new))
 print("Days below 56: ", len(sep_b_new))
 print ("Percentage of days above 56: ",len(sep_a_new) / (len(sep_a_new) + len(sep_b_new)) *100, "%")
 # %% HW3 Q4
+yr=np.arange(1989,2020)
 
-# 2013
-sep_early = [i for i in range(len(flow)) if day [i] <= 15 and month[i]==9 and year[i] == 2013]
-sep_late = [i for i in range(len(flow)) if day [i] > 15 and month[i]==9 and year[i] == 2013]
-d1 = [flow[j] for j in sep_early]
-d2 = [flow[j] for j in sep_late]
-if d1 > d2:
-        print("Average flow greater in early September, 2013")
+earlyflow = []
+laterflow = []
+for k in range(len(yr)):
+        sep_early = [i for i in range(len(flow)) if day [i] <= 15 and month[i]==9 and year[i] == yr[k]]
+        sep_late = [i for i in range(len(flow)) if day [i] > 15 and month[i]==9 and year[i] == yr[k]]
+        d1 = [flow[j] for j in sep_early]
+        d2 = [flow[j] for j in sep_late]
+        if d1 > d2:
+                print("Average flow greater in early September,", yr[k])
+                earlyflow.append(d1)
+        else:
+                print("Average flow greater in late September, ", yr[k])
+                earlyflow.append(d2)
+
+if len(earlyflow) > len(laterflow):
+        print("\nAverage flow generally decreases with time in September")
 else:
-        print("Average flow greater in late September, 2013")
-
-# 2014
-sep_early = [i for i in range(len(flow)) if day [i] <= 15 and month[i]==9 and year[i] == 2014]
-sep_late = [i for i in range(len(flow)) if day [i] > 15 and month[i]==9 and year[i] == 2014]
-d1 = [flow[j] for j in sep_early]
-d2 = [flow[j] for j in sep_late]
-if d1 > d2:
-        print("Average flow greater in early September, 2014")
-else:
-        print("Average flow greater in late September, 2014")
-
-# 2015
-sep_early = [i for i in range(len(flow)) if day [i] <= 15 and month[i]==9 and year[i] == 2015]
-sep_late = [i for i in range(len(flow)) if day [i] > 15 and month[i]==9 and year[i] == 2015]
-d1 = [flow[j] for j in sep_early]
-d2 = [flow[j] for j in sep_late]
-if d1 > d2:
-        print("Average flow greater in early September, 2015")
-else:
-        print("Average flow greater in late September, 2015")
-
-# 2016
-sep_early = [i for i in range(len(flow)) if day [i] <= 15 and month[i]==9 and year[i] == 2016]
-sep_late = [i for i in range(len(flow)) if day [i] > 15 and month[i]==9 and year[i] == 2016]
-d1 = [flow[j] for j in sep_early]
-d2 = [flow[j] for j in sep_late]
-if d1 > d2:
-        print("Average flow greater in early September, 2016")
-else:
-        print("Average flow greater in late September, 2016")
-
-# 2017
-sep_early = [i for i in range(len(flow)) if day [i] <= 15 and month[i]==9 and year[i] == 2017]
-sep_late = [i for i in range(len(flow)) if day [i] > 15 and month[i]==9 and year[i] == 2017]
-d1 = [flow[j] for j in sep_early]
-d2 = [flow[j] for j in sep_late]
-if d1 > d2:
-        print("Average flow greater in early September, 2017")
-else:
-        print("Average flow greater in late September, 2017")
-
-# 2018
-sep_early = [i for i in range(len(flow)) if day [i] <= 15 and month[i]==9 and year[i] == 2018]
-sep_late = [i for i in range(len(flow)) if day [i] > 15 and month[i]==9 and year[i] == 2018]
-d1 = [flow[j] for j in sep_early]
-d2 = [flow[j] for j in sep_late]
-if d1 > d2:
-        print("Average flow greater in early September, 2018")
-else:
-        print("Average flow greater in late September, 2018")
-
-# 2019
-sep_early = [i for i in range(len(flow)) if day [i] <= 15 and month[i]==9 and year[i] == 2019]
-sep_late = [i for i in range(len(flow)) if day [i] > 15 and month[i]==9 and year[i] == 2019]
-d1 = [flow[j] for j in sep_early]
-d2 = [flow[j] for j in sep_late]
-if d1 > d2:
-        print("Average flow greater in early September, 2019")
-else:
-        print("Average flow greater in late September, 2019")
+        print("Average flow generally increases with time in September")
 
 
-#
 # %%
