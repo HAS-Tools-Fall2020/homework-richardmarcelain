@@ -2,6 +2,9 @@
 
 #### Assignment Questions
 
+![Figure 1](C:/Users/Richard/Desktop/class/Course_Materials/homework-richardmarcelain/assignment_4/q1.png)
+![Figure 2](Images/example.png)
+
 __1.__ I used quantitative analysis to plot the histogram of September 21, and used that value as the weekly average for the forecast. However, after looking at the data, I choose to remove the 2004 data since it was anomalously much higher than any other year. Another histogram was plotted without the year 2004, which changed the figure and quantiles. This year's flow data represents the 10% quantile values, which compelled me to change all future forecasts to represent a much lower than average flow year.
 
 __2.__ The variable flow_data is an array composed of 'year', 'month', 'day' and 'flow' values. The values for the 'year', 'month', and 'day' are integer objects, and the values for 'flow' are float objects. The dimensions of the array are 11585 x 4 with a total size of 46312.
