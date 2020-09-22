@@ -5,7 +5,7 @@
 
 3/3 - Nice work!
 
-FYI for future reference you don't need to list repo changes.  I can see all of that in your repo history anyway you can just provide your text answers to the qustions.
+FYI for future reference you don't need to list repo changes.  I can see all of that in your repo history anyway you can just provide your text answers to the quetions.
 
 ---
 
