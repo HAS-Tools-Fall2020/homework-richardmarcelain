@@ -1,5 +1,10 @@
 # Marcelain 9/21 Assignment 4
 
+____
+# Grade
+2/3 - Nice work but 2/3 for late.
+___
+
 #### Assignment Questions
 
 ![Figure 1](assets/marcelain_HW4-d20f2dde.png)
@@ -14,4 +19,4 @@ __3.__ The daily flow values were greater than this week's prediction 47.4% of t
 
 __4.__ The daily flow values were greater than this week's prediction 100% (330/330) of the time before year 2000 and 94.1% (272/289) of the time after year 2010.
 
-__5.__ The daily flow values in early September are generally greater than in late September, implying that streamflow decreases with time during that month. 
+__5.__ The daily flow values in early September are generally greater than in late September, implying that streamflow decreases with time during that month.
