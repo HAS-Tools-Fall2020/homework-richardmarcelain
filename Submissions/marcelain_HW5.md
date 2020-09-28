@@ -6,9 +6,9 @@ I made my forecast using 2019 data estimates for time periods matchig this year'
 #### Assignment Questions
 
 __1.__ Summary of data frame properties:
- - **Column names** are agency_cd, site_no, datetime, flow, code, year, month, day
+ - **Column names** are 'agency_cd', 'site_no', 'datetime', 'flow', 'code', 'year', 'month', and 'day'
  - **Index** is 11592 entries, 0 to 11591
- - **Data types** for each column are agency_cd(object), site_no(int64), datetime(object), flow(float64), code(object), year(int32), month(int32), day(int32)
+ - **Data types** for each column are 'agency_cd'(**object**), 'site_no'(**int64**), 'datetime'(**object**), 'flow'(**float64**), 'code'(**object**), 'year'(**int32**), 'month'(**int32**), and 'day'(**int32**)
 
 __2.__ Statistics of Daily Flow [cfs]
  - **Min:**     19.00
@@ -67,7 +67,7 @@ __5.__ Table of highest and lowest flow years for each month:
 | 11 |    2004   | 2016 |
 | 12 |    2004   | 2012 |
 
-__6.__ Table of historical flows that are with 10% of the week 1 forecast of 101.5 dfs: 
+__6.__ Table of historical flows that are within 10% of the week 1 forecast of 101.5 cfs: 
 
 |  datetime  |  flow  | year | month | day |
 | ---------- | ------ | ---- | ----- | --- |
