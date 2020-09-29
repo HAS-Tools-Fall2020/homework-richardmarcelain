@@ -1,5 +1,11 @@
 # Marcelain 9/28 Assignment 5
 
+___
+## Grade
+3/3 - Great work!
+___
+
+
 I made my forecast using 2019 data estimates for time periods matchig this year's prediction calendar.  Each weekly estimate lined up close to previous predictions using the same methods, and were the most accurate method I've tried.
 
 
@@ -38,36 +44,36 @@ __3.__ Statistics of Monthly Flow [cfs]
 __4.__ Table of 5 highest and lowest flow values:
 
 |  datetime  |  month | Flow |
-| ---------- | ------ | ---- | 
-| 2012-07-01 |    7   | 19.0 | 
-| 2012-07-02 |    7   | 20.1 | 
-| 2012-06-30 |    6   | 22.1 | 
+| ---------- | ------ | ---- |
+| 2012-07-01 |    7   | 19.0 |
+| 2012-07-02 |    7   | 20.1 |
+| 2012-06-30 |    6   | 22.1 |
 | 2012-06-29 |    6   | 22.5 |
-| 2012-07-03 |    7   | 23.4 | 
+| 2012-07-03 |    7   | 23.4 |
 | 1995-03-06 |    3   | 30500.0 |
-| 2005-02-12 |    2   | 35600.0 | 
+| 2005-02-12 |    2   | 35600.0 |
 | 1995-02-15 |    2   | 45500.0 |
-| 1993-02-20 |    2   | 61000.0 | 
+| 1993-02-20 |    2   | 61000.0 |
 | 1993-01-08 |    1   | 63400.0 |
 
 __5.__ Table of highest and lowest flow years for each month:
 
 |  month  |  max flow | min flow |
-| ---------- | ------ | ---- | 
-| 1 |   1993  | 2003 | 
-| 2 |    1993   | 1991 | 
-| 3 |   1995   | 1989 | 
+| ---------- | ------ | ---- |
+| 1 |   1993  | 2003 |
+| 2 |    1993   | 1991 |
+| 3 |   1995   | 1989 |
 | 4 |    1991   | 2018 |
-| 5 |    1992   | 2004 | 
+| 5 |    1992   | 2004 |
 | 6 |    1992   | 2012 |
-| 7 |    2006   | 2012 | 
+| 7 |    2006   | 2012 |
 | 8|    1992   | 2019 |
-| 9 |    2004   | 2020 | 
+| 9 |    2004   | 2020 |
 | 10 |    2010   | 2012 |
 | 11 |    2004   | 2016 |
 | 12 |    2004   | 2012 |
 
-__6.__ Table of historical flows that are within 10% of the week 1 forecast of 101.5 cfs: 
+__6.__ Table of historical flows that are within 10% of the week 1 forecast of 101.5 cfs:
 
 |  datetime  |  flow  | year | month | day |
 | ---------- | ------ | ---- | ----- | --- |
