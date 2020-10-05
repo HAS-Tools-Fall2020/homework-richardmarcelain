@@ -33,6 +33,7 @@ still maintaining the natural intervals (periodicity) which reoccur each year, m
 because it's both good and bad for the reasons I stated.  If I were to guess, the simulation issue may be caused by the drastically
 different extremes between the high and low peaks in the periodicity.  Perhaps a training period that included more extreme lows than
 highs (not equal amounts) would lower the average value line to match the observed dataset.
+
 ![](assets/marcelain_HW6-0b5e67da.png)
 
 
