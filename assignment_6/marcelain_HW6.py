@@ -14,8 +14,8 @@ import datetime
 # %%
 # ** MODIFY **
 # Set the file name and path to where you have stored the data
-filename = 'streamflow_week1.txt'
-filepath = os.path.join('data', filename)
+filename = 'streamflow_week6.txt'
+filepath = os.path.join('C:/Users/Richard/Desktop/class/Course_Materials/homework-richardmarcelain/data/', filename)
 print(os.getcwd())
 print(filepath)
 
@@ -53,8 +53,8 @@ flow_weekly['flow_tm2'] = flow_weekly['flow'].shift(2)
 # here I'm grabbing the first 800 weeks 
 # Note1 - dropping the first two weeks since they wont have lagged data
 # to go with them  
-train = flow_weekly[2:800][['flow', 'flow_tm1', 'flow_tm2']]
-test = flow_weekly[800:][['flow', 'flow_tm1', 'flow_tm2']]
+train = flow_weekly[100:1100][['flow', 'flow_tm1', 'flow_tm2']]
+test = flow_weekly[1100:][['flow', 'flow_tm1', 'flow_tm2']]
 
 # Step 3: Fit a linear regression model using sklearn 
 model = LinearRegression()
@@ -109,49 +109,66 @@ q_pred2 = model2.intercept_   \
 # Note that date is the index for the dataframe so it will 
 # automatically treat this as our x axis unless we tell it otherwise
 fig, ax = plt.subplots()
-ax.plot(flow_weekly['flow'], label='full')
-ax.plot(train['flow'], 'r:', label='training')
-ax.set(title="Observed Flow", xlabel="Date", 
+ax.plot(flow_weekly['flow'], '-g', label='observed', alpha=.5)
+ax.plot(train['flow'], 'b:', label='training')
+ax.set(title="Flow Time Series with Training Period", xlabel="Date", 
         ylabel="Weekly Avg Flow [cfs]",
         yscale='log')
 ax.legend()
 # an example of saving your figure to a file
-fig.set_size_inches(5,3)
-fig.savefig("Observed_Flow.png")
+fig.set_size_inches(6,4)
+fig.savefig("Plot_1.png")
 
 #2. Time series of flow values with the x axis range limited
 fig, ax = plt.subplots()
-ax.plot(flow_weekly['flow'], label='full')
-ax.plot(train['flow'], 'r:', label='training')
+ax.plot(flow_weekly['flow'], '-g',label='full', alpha=.5)
+ax.plot(train['flow'], 'b:', label='training')
 ax.set(title="Observed Flow", xlabel="Date", ylabel="Weekly Avg Flow [cfs]",
         yscale='log', xlim=[datetime.date(2000, 1, 26), datetime.date(2014, 2, 1)])
-ax.legend()
+ax.legend(fancybox=True, framealpha=1, shadow=True, borderpad=1)
 
 
 # 3. Line  plot comparison of predicted and observed flows
 fig, ax = plt.subplots()
-ax.plot(train['flow'], color='grey', linewidth=2, label='observed')
-ax.plot(train.index, q_pred_train, color='green', linestyle='--', 
+ax.plot(train['flow'], color='green', linewidth=2, label='observed', alpha=.5)
+ax.plot(train.index, q_pred_train, color='red', linestyle='--', 
         label='simulated')
-ax.set(title="Observed Flow", xlabel="Date", ylabel="Weekly Avg Flow [cfs]",
+ax.set(title="Flow Time Series with Simulated Results", xlabel="Date", ylabel="Weekly Avg Flow [cfs]",
         yscale='log')
-ax.legend()
+ax.legend(fancybox=True, framealpha=1, shadow=True, borderpad=1)
+fig.set_size_inches(6,4)
+fig.savefig("Plot_2.png")
 
 # 4. Scatter plot of t vs t-1 flow with log log axes
 fig, ax = plt.subplots()
-ax.scatter(train['flow_tm1'], train['flow'], marker='p',
-              color='blueviolet', label='obs')
-ax.set(xlabel='flow t-1', ylabel='flow t', yscale='log', xscale='log')
-ax.plot(np.sort(train['flow_tm1']), np.sort(q_pred_train), label='AR model')
-ax.legend()
+ax.scatter(train['flow_tm1'], train['flow'], marker='v',
+              color='green', label='obs', alpha=.5)
+ax.set(title="Autoregression (log) of Flow vs Lagged Flow (1-week)",xlabel='flow t-1', ylabel='flow t', yscale='log', xscale='log')
+ax.plot(np.sort(train['flow_tm1']), np.sort(q_pred_train), label='AR model',color='red')
+ax.legend(fancybox=True, framealpha=1, shadow=True, borderpad=1)
+fig.set_size_inches(6,4)
+fig.savefig("Plot_3.png")
 
 # 5. Scatter plot of t vs t-1 flow with normal axes
 fig, ax = plt.subplots()
-ax.scatter(train['flow_tm1'], train['flow'], marker='p',
-              color='blueviolet', label='observations')
-ax.set(xlabel='flow t-1', ylabel='flow t')
-ax.plot(np.sort(train['flow_tm1']), np.sort(q_pred_train), label='AR model')
-ax.legend()
+ax.scatter(train['flow_tm1'], train['flow'], marker='v',
+              color='green', label='observations', alpha=.5)
+ax.set(title="Autoregression (linear) of Flow vs Lagged Flow (1-week)",xlabel='flow t-1', ylabel='flow t')
+ax.plot(np.sort(train['flow_tm1']), np.sort(q_pred_train), label='AR model', color='red')
+ax.legend(fancybox=True, framealpha=1, shadow=True, borderpad=1)
+fig.set_size_inches(6,4)
+fig.savefig("Plot_4.png")
 
 plt.show()
 
+
+# %% Forecasting
+z = flow_weekly[(flow_weekly['year']==2019) & (flow_weekly['month']>=8)]
+print(z['flow_tm2'])
+# %%  Actual Results
+# week 1, 9/5:   57.1
+# week 2, 9/12:  42.26
+# week 3, 9/19:  56.2
+# week 4, 9/26:  58.43
+# week 5, 10/5:
+# %%
