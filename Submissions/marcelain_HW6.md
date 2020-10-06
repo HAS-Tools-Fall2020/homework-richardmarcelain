@@ -1,6 +1,10 @@
 # Marcelain 10/5 Assignment 6
 
+___
+### Grade
+3/3 - Nice work, great graphs!
 
+___
 
 #### Assignment Questions
 
