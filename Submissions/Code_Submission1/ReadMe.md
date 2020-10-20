@@ -2,6 +2,16 @@
 # Code author:  Richard Marcelain, marcelain@email.arizona.edu
 # Code Review Partner:  Quinn Hull
 
+#### Grade 
+ - 5/6  
+ - Readability: 3
+ - Style: 3 
+ - Code: 2
+
+ - Nice work your script is easy to read and follow. 
+ - I Substracted 1 because you are missing your 16 week forecasts. 
+ 
+
 # Instructions
 **1.** Run python script Marcelain_HW8.py using Visual Studio Code
 

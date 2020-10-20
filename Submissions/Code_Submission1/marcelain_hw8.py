@@ -13,6 +13,7 @@ import datetime
 
 # %% 
 # Function to predict weekly flow values using AR model results and previous flow data
+# LC - Nice documentation
 def predictions(lastweek_flow,model):
     ''''
     This function will be call on at the end of AR model section of code.
@@ -69,10 +70,12 @@ flow_weekly['flow_tm1'] = flow_weekly['flow'].shift(1)
 flow_weekly['flow_tm2'] = flow_weekly['flow'].shift(2)
 
 # Step 2: Robust modern dataset to train the AR model starting and ending at low flow values to influence results
+# LC- You could set the numbers for these ranges as variables and link them to dates. 
 train = flow_weekly[1400:1600][['flow', 'flow_tm1', 'flow_tm2']]
 test = flow_weekly[1600:][['flow', 'flow_tm1', 'flow_tm2']]
 
 # Step 3: Fit a linear regression model
+# LC - model fitting would  also be a good step to add  into the function. 
 model = LinearRegression()
 x=train['flow_tm1'].values.reshape(-1,1)  
 y=train['flow'].values
