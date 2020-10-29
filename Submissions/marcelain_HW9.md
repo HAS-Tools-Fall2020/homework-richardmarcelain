@@ -2,7 +2,7 @@
 
 ___
 ### Grade
-
+3/3 - Nice work but I would have like to see you expand a bit more on the example script to choose a different location or a different variable. 
 
 ___
 
