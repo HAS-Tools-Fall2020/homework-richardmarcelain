@@ -130,7 +130,7 @@ ax.set_ylabel('Easting (m)')
 ctx.add_basemap(ax, crs=gages_az.crs, url=ctx.providers.OpenTopoMap, zorder=1, alpha=0.5)
 ax.legend()
 plt.show()
-fig.savefig("map.png")
+#fig.savefig("map.png")
 # 
 
 
