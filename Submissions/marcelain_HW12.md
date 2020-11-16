@@ -16,7 +16,8 @@ __2.__ **Description of Dataset Added.**
 - The dataset I added was preciptation from NCEP North American Regional Reanalysis: NARR.
 - The spatial resoluation is 349x277 which is approximately 0.3 degrees (32km) resolution.  The temporal resolution is 8-times Daily means for 1979/01/01 to 2020/10/31.
 - The dataset was retrieved from NOAA PSL website at https://psl.noaa.gov/data/gridded/data.narr.monolevel.html.
-- The approach I used to access the data was to use the website I listed above which sent me to a dataset directory by variable and year.
+- The approach I used to extract the data was similar to the starter code.  The variable was the same, but the different dimensions meant that I first had to locate the
+correct grid for Tucson, AZ.  I then created timeseries plots for 2020 and 2019.  I adjust the dates to only cover the past four months to show meaningful year-to-year changes.
 
 __3.__ **Time Series Plots.**  
 
