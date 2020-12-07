@@ -94,6 +94,9 @@ print('2-Week: ',flow_prediction[2].round(1), "cfs")
 
 # %%
 print('Quantile based season forecasts:')
+aug24 = flow_data[(flow_data[:,2] == 24) & (flow_data[:,1]==8), ]
+print(np.quantile(aug24[:,3], q=[0]))
+
 aug31 = flow_data[(flow_data[:,2] == 31) & (flow_data[:,1]==8), ]
 print(np.quantile(aug31[:,3], q=[0]))
 
@@ -136,8 +139,8 @@ print(np.quantile(nov23[:,3], q=[0]))
 nov30 = flow_data[(flow_data[:,2] == 30) & (flow_data[:,1]==11), ]
 print(np.quantile(nov30[:,3], q=[0]))
 
-dec17 = flow_data[(flow_data[:,2] == 17) & (flow_data[:,1]==12), ]
-print(np.quantile(dec17[:,3], q=[0]))
+dec7 = flow_data[(flow_data[:,2] == 7) & (flow_data[:,1]==12), ]
+print(np.quantile(dec7[:,3], q=[0]))
 # %%
 
 # %%
