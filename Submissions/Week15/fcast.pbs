@@ -1,0 +1,11 @@
+#!/bin/bash
+#PBS -W group_list=tmeixner
+### PBS -m bea
+### PBS -M marcelain@email.arizona.edub
+#PBS -q standard
+#PBS -l select=1:ncpus=1:mem=6gb:pcmem=6gb
+#PBS -l walltime=0:1:0
+#PBS -l cput=0:1:0
+
+cd ~/HAS_tools
+python fcast.py
