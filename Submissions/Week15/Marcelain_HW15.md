@@ -2,8 +2,7 @@
 
 ___
 ### Grade
-
-
+3/3 - Nice work! I'm glad you got it working even even if you don't have an immediate use for it. 
 ___
 
 #### Assignment Questions
